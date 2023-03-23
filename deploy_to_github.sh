@@ -16,8 +16,8 @@ echo "english to pdf done!"
 xelatex severi-andrea-cv-it.tex
 echo "italian to pdf done!"
 mv *.pdf ../
-# echo "commit message:"
-# read message
-# git add .
-# git commit -m "$message"
-# git push origin main
+echo "commit message:"
+read message
+git add .
+git commit -m "$message"
+git push origin main
