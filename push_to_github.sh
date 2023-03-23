@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# MAKE SURE TO git pull before
+
 # listen for .zip files
 inotifywait -m . -e close_write -e moved_to |
     while read directory action file; do
