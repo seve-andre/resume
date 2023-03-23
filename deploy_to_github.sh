@@ -6,7 +6,10 @@ inotifywait -m . -e close_write -e moved_to |
             jar xvf resume.zip
             echo "unzipped"
             rm -rf resume.zip
-            xelatex *.tex
+            xelatex severi-andrea-cv-en.tex
+            echo "english to pdf done!"
+            xelatex severi-andrea-cv-it.tex
+            echo "italian to pdf done!"
             echo "commit message:"
             read message
             git add .
