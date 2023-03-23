@@ -16,6 +16,7 @@ echo "english to pdf done!"
 xelatex severi-andrea-cv-it.tex
 echo "italian to pdf done!"
 mv *.pdf ../
+cd ..
 echo "commit message:"
 read message
 git add .
