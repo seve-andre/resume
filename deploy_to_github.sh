@@ -1,7 +1,7 @@
 #!/bin/bash
 inotifywait -m . -e close_write -e moved_to |
     while read directory action file; do
-        if [[ "$file" =~ .*zip$ ]]; then # Does the file end with .xml?
+        if [[ "$file" =~ .*zip$ ]]; then # Does the file end with .zip?
             echo "new zip file added"
             jar xvf resume.zip
             echo "unzipped"
