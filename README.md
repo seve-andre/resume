@@ -7,5 +7,3 @@ It listens to the repo local directory and when CV source zip file is downloaded
 - delete `.zip` file
 - create PDF files for both english and italian versions (from .tex files)
 - push to [github repo](https://github.com/seve-andre/curriculum-vitae)
-- on github repo:
-  - github workflows should make a new release
