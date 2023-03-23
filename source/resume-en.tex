@@ -1,0 +1,145 @@
+\documentclass[]{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Name, degree, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Andrea Severi}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{seve-andre.github.io}
+% vs how you want it to show up. If it's the same you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://seve-andre.github.io/}
+\newcommand{\myLocation}{Cesena, IT }
+\newcommand{\myPhoneNumber}{342-3209-388}
+\newcommand{\yourEmail}{andrea.severi.dev@gmail.com}
+\newcommand{\githubUserName}{seve-andre}
+\newcommand{\linkedInUserName}{andrea-severi}
+
+% An alternate profile section 
+% \alignProfileTable
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%     \ralewayBold{\href{\yourWebsiteLink}{\Large \yourName}} & 
+%     Email : \href{mailto:\yourEmail}{\yourEmail}
+%     \\
+%     \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+%     Mobile : \myPhoneNumber
+%     \\
+%     \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+%     \\
+% \end{tabular*}
+
+\begin{center}
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{7pt}
+    \normalsize \href{mailto:\yourEmail}{\underline{\yourEmail}} $|$
+    \href{https://www.linkedin.com/in/andrea-severi/}{\underline{linkedIn/\linkedInUserName}} $|$
+    \href{https://github.com/seve-andre}{\underline{github/\githubUserName}} 
+    $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
+    \\ \vspace{3pt}
+    \myLocation $|$ \myPhoneNumber
+\end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{BS Computer Science and Engineering}{University of Bologna}{Cesena, IT}{Jul 2023}
+
+% \teacherAssistant{World Wide Web Information Systems Development}
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeading{\href{https://flashstart.com/}{Flashstart}}{Artificial Intelligence Intern}{Cesena, IT}{Jun 2022 – Jul 2022}
+\begin{bullets}
+    \item Retrieved website links datasets belonging to specific categories
+    \item Extracted relevant text of the aforementioned websites and detected their language
+    \item Removed \textbf{stopwords} with NLTK in Python
+    \item Applied \textbf{stemming} and \textbf{lemmatization} with NLTK in Python on the datasets
+    \item Generated \textbf{wordclouds} to visualize the frequency and importance of each word
+    \item Created a text-classification \textbf{neural network} using Keras and TensorFlow
+\end{bullets}
+\sectionsep
+
+\resumeHeading{\href{https://flashstart.com/}{Flashstart}}{Artificial Intelligence Intern}{Cesena, IT}{Jul 2021 - Aug 2021}
+\begin{bullets}
+    \item Retrieved datasets containing \textbf{foreign words} to improve AI accuracy
+    \item Removed \textbf{stopwords} with NLTK in Python
+    \item Applied \textbf{stemming} and \textbf{lemmatization} with NLTK in Python on the datasets
+    \item Implemented a \textbf{translator} to translate the datasets to English
+    \item Improved the \textbf{quality} of already-existing datasets
+\end{bullets}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeadingWithDate{smart garden}{https://github.com/seve-andre/smart-garden}{C++, IoT, Arduino, Java}{Jul 2022}
+Embedded \& IoT system implementing a simplified version of a smart garden, i.e., a smart system monitoring and controlling the state of the garden through sensors, HTTP protocol, serial and Bluetooth lines. \\
+\sectionsep
+  
+\projectHeadingWithDate{myunibo}{https://github.com/seve-andre/myUniBo}{Kotlin, Jetpack Compose, Android}{May - Jun 2022}
+Revisited \href{https://play.google.com/store/apps/details?id=com.myunibo}{myUniBo} University of Bologna app for students, that makes it simpler and more intuitive to book exams, see lessons of the day, grades and stats about student's career.
+\sectionsep
+
+\projectHeadingWithDate{airline traffic simulator}{https://github.com/seve-andre/OOP20-alt-sim}{Java, JavaFX}{May - Aug 2021}
+Group project of a 2D desktop video game inspired by \href{https://www.youtube.com/watch?v=KTH084KeFBc}{Flight Control}. User's goal is to land as many airplanes as possible without causing collisions. Difficulty increases each time airplanes land, which makes you earn points.
+\sectionsep
+
+\projectHeadingWithDate{casine}{https://github.com/seve-andre/casine}{Tauri, Rust, Svelte, Typescript}{Feb - May 2023}
+Apartment management system to stores guests, their data and info about owner's houses and apartments. Calculate final price, based on number of guests and their age. \\
+\sectionsep
+
+\projectHeading{!!! jetpack compose extended / java more}{https://github.com/Aarif123456/GoalOrientedBehaviour}{C\#}
+A capture-the-flag-styled shooting game composed of AI-controlled players. The agents change their goals based on various factors, such as their health, current weapon, their personality and what they see.\\
+\sectionsep
+
+\projectHeadingWithDate{food delivery website}{https://github.com/seve-andre/Progetto-WEB}{HTML, CSS, Javascript, PHP}{Jan 2022}
+A food delivery website just like many others, that allows you to buy food and drinks on the user part. On the owner's part, it lets you manage orders.\\
+\sectionsep
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{Java, Kotlin, Python, Rust, TypeScript, SQL}
+    \\
+    \singleItem{Web Development:}{React, Vue.js, PHP, JavaScript, TypeScript, HTML/CSS}
+    \\
+    \singleItem{Technology:}{Git, MySQL, SQLite, LaTeX}
+\end{skillList}
+\end{document}
