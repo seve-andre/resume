@@ -12,17 +12,17 @@ inotifywait -m . -e close_write -e moved_to |
         fi
     done
 # move zip file to source directory
-mv cv.zip source/
-cd source/
+mv resume.zip src/
+cd src/
 # unzip the source zip file
-jar xvf cv.zip
+jar xvf resume.zip
 echo "unzipped"
 # delete the zip file
-rm -rf cv.zip
+rm -rf resume.zip
 # create pdfs for both english and italian versions
-xelatex severi-andrea-cv-en.tex
+xelatex severi-andrea-resume-en.tex
 echo "english to pdf done!"
-xelatex severi-andrea-cv-it.tex
+xelatex severi-andrea-resume-it.tex
 echo "italian to pdf done!"
 
 # move the pdfs to the root directory
