@@ -1,4 +1,4 @@
-# My resume
+# Andrea Severi's resume
 
 ## How does `push_to_github.sh` work?
 :warning: Make sure `push_to_github.sh` script is running.
